@@ -1,0 +1,15 @@
+create database:
+	brew install postgresql
+	brew services start postgresql
+	postgres -V
+	psql postgres
+	CREATE ROLE will WITH LOGIN PASSWORD 'amazing hire';
+	ALTER ROLE will CREATEDB;
+	CREATE DATABASE bundesdata;
+	GRANT ALL PRIVILEGES ON DATABASE bundesdata TO will;
+
+create environment:
+	python3 -m venv pyball
+	source pyball/bin/activate
+	pip install --upgrade pip
+	pip install -r requirement.txt
